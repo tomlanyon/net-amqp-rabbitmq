@@ -10,7 +10,7 @@ use Cwd;
 use English qw(-no_match_vars);
 use File::ShareDir;
 use IO::Select;
-use IO::Socket::INET;
+use IO::Socket::IP;
 use List::MoreUtils;
 use Net::AMQP;
 use Sys::Hostname;
@@ -47,7 +47,7 @@ sub connect {
 		}
 
 		$self->_remote(
-			IO::Socket::INET->new(
+			IO::Socket::IP->new(
 				PeerAddr => $args{host} || 'localhost',
 				PeerPort => $args{port} || 5672,
 				Proto => 'tcp',

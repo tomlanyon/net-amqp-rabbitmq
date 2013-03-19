@@ -10,6 +10,7 @@ my $build = Module::Build->new(
 		'Net::AMQP' => 0.05,
 		'List::MoreUtils' => 0.25,
 		'File::ShareDir' => 1.00,
+                'IO::Socket::IP' => 0.19,
 	},
 
 	build_requires => {
